@@ -1,0 +1,18 @@
+<div class="row g-4">
+
+  @for (project of projects; track project.id) {
+
+    <div [class]="columnClass">
+
+      <app-project-card
+        [project]="project"
+        [management]="management"
+        (edit)="editProject($event)"
+        (delete)="deleteProject($event)">
+      </app-project-card>
+
+    </div>
+
+  }
+
+</div>

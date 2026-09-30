@@ -1,1 +1,62 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-color: #2563eb;
+  --dark-color: #0f172a;
+  --text-color: #334155;
+  --muted-color: #64748b;
+  --border-color: #e2e8f0;
+  --background-color: #f8fafc;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a {
+  transition: all 0.2s ease;
+}
+
+.navbar {
+  background-color: #ffffff !important;
+}
+
+.navbar-brand {
+  color: var(--dark-color);
+}
+
+.nav-link {
+  color: var(--text-color);
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+.border {
+  border-color: var(--border-color) !important;
+}
+
+.badge {
+  padding: 0.6rem 0.8rem;
+  font-size: 0.85rem;
+}
+
+footer {
+  background-color: #ffffff;
+}

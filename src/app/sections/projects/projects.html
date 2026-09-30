@@ -1,0 +1,67 @@
+<section class="projects-section">
+
+  <div class="container py-5">
+
+    <div class="section-heading text-center">
+
+      <span class="section-label">
+        My Work
+      </span>
+
+      <h1>
+        Featured & Technical Projects
+      </h1>
+
+      <p>
+        A selection of AI, machine learning, software engineering,
+        web, database, game development, and intelligent systems projects.
+      </p>
+
+    </div>
+
+
+    <!-- Featured Projects -->
+
+    <div class="featured-header">
+
+      <h2>
+        Featured Projects
+      </h2>
+
+      <p>
+        My latest and most prominent AI-focused projects.
+      </p>
+
+    </div>
+
+
+    <app-project-list
+      [projects]="featuredProjects"
+      columnClass="col-lg-6">
+    </app-project-list>
+
+
+    <!-- Other Projects -->
+
+    <div class="featured-header mt-5">
+
+      <h2>
+        Other Projects
+      </h2>
+
+      <p>
+        Additional projects across AI, software, databases,
+        game development, IoT, and robotics.
+      </p>
+
+    </div>
+
+
+    <app-project-list
+      [projects]="otherProjects"
+      columnClass="col-md-6 col-xl-4">
+    </app-project-list>
+
+  </div>
+
+</section>

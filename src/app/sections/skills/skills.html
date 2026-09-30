@@ -1,0 +1,86 @@
+<section class="skills-section">
+  <div class="container py-5">
+
+    <div class="section-heading text-center">
+      <span class="section-label">Skills</span>
+
+      <h1>
+        Technical Skills & Expertise
+      </h1>
+
+      <p>
+        A growing technical toolkit built through academic study,
+        practical projects, training programs, and continuous learning.
+      </p>
+    </div>
+
+    <div class="row g-4">
+
+      @for (group of skillGroups; track group.title) {
+        <div class="col-md-6">
+
+          <article class="skill-card h-100">
+
+            <div class="skill-card-header">
+              <span class="skill-number">
+                {{ $index + 1 }}
+              </span>
+
+              <div>
+                <h2>
+                  {{ group.title }}
+                </h2>
+
+                <p>
+                  {{ group.description }}
+                </p>
+              </div>
+            </div>
+
+            <div class="skill-list">
+
+              @for (skill of group.skills; track skill) {
+                <span class="skill-item">
+                  {{ skill }}
+                </span>
+              }
+
+            </div>
+
+          </article>
+
+        </div>
+      }
+
+    </div>
+
+    <div class="learning-card">
+
+      <div>
+        <span class="section-label">
+          Continuous Learning
+        </span>
+
+        <h2>
+          Always Building, Learning, and Improving
+        </h2>
+
+        <p>
+          I continuously expand my technical knowledge through structured
+          training, hands-on projects, competitive programming, and
+          experimentation with new technologies.
+        </p>
+      </div>
+
+      <div class="learning-tags">
+        <span>AI</span>
+        <span>Machine Learning</span>
+        <span>Angular</span>
+        <span>Software Engineering</span>
+        <span>Problem Solving</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
