@@ -436,4 +436,6 @@ router.delete(
 );
 
 
+router.Project = Project;
+
 module.exports = router;

@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  OnInit
+} from '@angular/core';
 
 import { Project } from '../../core/models/project.model';
 import { ProjectApiService } from '../../core/services/project-api.service';
@@ -20,7 +24,8 @@ export class Projects implements OnInit {
   otherProjects: Project[] = [];
 
   constructor(
-    private projectApiService: ProjectApiService
+    private projectApiService: ProjectApiService,
+    private cdr: ChangeDetectorRef
   ) {}
 
   ngOnInit(): void {
@@ -33,16 +38,20 @@ export class Projects implements OnInit {
 
         this.featuredProjects =
           data.filter(
-            project => project.featured
+            project => project.featured === true
           );
 
         this.otherProjects =
           data.filter(
-            project => !project.featured
+            project => project.featured !== true
           );
 
-        console.log('Projects from API:', data);
+        console.log(
+          'Projects from API:',
+          data
+        );
 
+        this.cdr.detectChanges();
       });
   }
 }
